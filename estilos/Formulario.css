@@ -1,0 +1,134 @@
+/* --- VARIABLES (Asegúrate de que existan) --- */
+:root {
+    --azul-navy: #1a1c2d;
+    --cyan-em: #4facfe;
+}
+
+/* --- ESTRUCTURA GLOBAL --- */
+.cuerpo-dashboard {
+    display: flex;
+    margin: 0;
+    background-color: #f8fafc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.contenido-principal {
+    margin-left: 260px; /* Ancho exacto del menú */
+    width: calc(100% - 260px);
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* --- MENÚ LATERAL (CORREGIDO) --- */
+.menu-lateral {
+    width: 260px;
+    height: 100vh;
+    background: var(--azul-navy);
+    color: white;
+    position: fixed; /* Esto lo mantiene fijo a la izquierda */
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    z-index: 1000;
+}
+
+.menu-logo { padding: 0 30px 40px; text-align: center; }
+.logo-img { height: 45px; }
+
+.menu-lista { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
+.menu-lista li a {
+    display: flex; align-items: center; gap: 15px;
+    padding: 15px 30px; color: #94a3b8; text-decoration: none; transition: 0.3s;
+}
+
+.menu-lista li a:hover, .menu-lista li a.activo {
+    color: white; background: rgba(66, 136, 197, 0.1);
+    border-left: 4px solid var(--cyan-em);
+}
+
+.menu-pie { padding: 20px 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+.enlace-salir { color: #ef4444; text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 600; margin-bottom: 15px; }
+.perfil-usuario-info { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--cyan-em); }
+
+/* --- CONTENEDOR DE FORMULARIO --- */
+.contenedor-formulario-soft {
+    max-width: 1000px; /* Un poco más ancho para los nuevos campos */
+    margin: 0 auto;
+}
+
+.header-pasos {
+    margin-bottom: 30px;
+    border-left: 5px solid var(--cyan-em);
+    padding-left: 20px;
+}
+
+.header-pasos h2 { color: var(--azul-navy); font-size: 1.8rem; margin: 0; }
+.header-pasos p { color: #64748b; font-size: 1rem; }
+
+/* --- CARDS DE SECCIÓN --- */
+.card-blanca {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+}
+
+.card-header {
+    display: flex; align-items: center; gap: 15px;
+    margin-bottom: 25px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px;
+}
+
+.paso-numero {
+    background: var(--azul-navy); color: var(--cyan-em);
+    width: 35px; height: 35px; display: flex; align-items: center;
+    justify-content: center; border-radius: 50%; font-weight: 800;
+}
+
+/* --- GRID Y CAMPOS --- */
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.grupo-input { display: flex; flex-direction: column; gap: 8px; }
+.grupo-input label { font-weight: 600; color: #475569; font-size: 0.9rem; }
+
+input[type="text"], input[type="date"], input[type="number"], input[type="email"], input[type="tel"], select {
+    padding: 12px 15px; border: 1.5px solid #e2e8f0; border-radius: 12px;
+    background: #f8fafc; color: #1e293b; font-size: 1rem; transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none; border-color: var(--cyan-em); background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+}
+
+/* --- ÁREA DE CARGA DE ARCHIVOS --- */
+.upload-area {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;
+}
+
+.file-item label {
+    background: #f8fafc; border: 2px dashed #cbd5e1; padding: 25px 15px;
+    border-radius: 15px; display: flex; flex-direction: column;
+    align-items: center; gap: 10px; cursor: pointer; transition: 0.3s;
+}
+
+.file-item label:hover { border-color: var(--cyan-em); background: #f0f9ff; }
+.file-item i { font-size: 1.8rem; color: var(--cyan-em); }
+.file-item input[type="file"] { display: none; }
+
+/* --- BOTÓN DE ENVÍO --- */
+.btn-primario-grande {
+    width: 100%; padding: 18px;
+    background: linear-gradient(135deg, var(--azul-navy), #2a2d45);
+    color: white; border: none; border-radius: 15px;
+    font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: 0.4s;
+}
+
+.btn-primario-grande:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }

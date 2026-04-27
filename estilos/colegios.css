@@ -1,0 +1,229 @@
+/* estilos/instituciones.css */
+
+:root {
+    --azul-navy: #153051;
+    --cyan-em: #4facfe;
+    --blanco: #ffffff;
+    --gris-fondo: #f8fafc;
+    --gris-texto: #64748b;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Ajuste del cuerpo para el layout con menú lateral */
+.cuerpo-dashboard {
+    background-color: var(--gris-fondo);
+    display: flex;
+}
+
+.contenido-principal {
+    margin-left: 260px; /* Ancho del menú lateral */
+    padding: 40px;
+    width: 100%;
+}
+
+/* Header de la sección */
+.header-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.texto-header h1 {
+    color: var(--azul-navy);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.texto-header p {
+    color: var(--gris-texto);
+    margin: 5px 0 0;
+}
+
+/* Buscador */
+.busqueda-contenedor {
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--sombra);
+    border: 1px solid #e2e8f0;
+}
+
+.busqueda-contenedor i {
+    color: var(--cyan-em);
+    margin-right: 10px;
+}
+
+.busqueda-contenedor input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 500;
+}
+
+/* Grid de Sedes */
+.grid-sedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Crea columnas automáticas */
+    gap: 30px;
+}
+
+/* Tarjeta Individual (El Cuadro) */
+.tarjeta-sede {
+    background: var(--blanco);
+    border-radius: 25px;
+    overflow: hidden; /* Para que la imagen respete los bordes redondeados */
+    box-shadow: var(--sombra);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-sede:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.15);
+}
+
+.imagen-sede {
+    position: relative;
+    height: 180px;
+}
+
+.imagen-sede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.etiqueta-cupos {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(34, 197, 94, 0.9); /* Verde éxito */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.info-sede {
+    padding: 20px;
+}
+
+.info-sede h3 {
+    color: var(--azul-navy);
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.ubicacion {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin-bottom: 15px;
+}
+
+.detalles-mini {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--azul-navy);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* Botón Ver Más */
+.btn-ver-mas {
+    display: block;
+    text-align: center;
+    background: #f1f5f9;
+    color: var(--azul-navy);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background: var(--cyan-em);
+    color: white;
+}
+/* --- MENÚ LATERAL --- */
+.menu-lateral {
+    width: 260px;
+    height: 100vh;
+    background: var(--azul-navy);
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.menu-logo {
+    padding: 0 30px 40px;
+    text-align: center;
+}
+
+.logo-img {
+    height: 45px;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu-lista li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-lista li a i {
+    font-size: 1.2rem;
+}
+
+.menu-lista li a:hover, 
+.menu-lista li a.activo {
+    color: white;
+    background: rgba(66, 136, 197, 0.1);
+    border-left: 4px solid var(--cyan-em);
+}
+
+.menu-pie {
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.enlace-salir {
+    color: #ef4444;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.perfil-usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--cyan-em);
+}
