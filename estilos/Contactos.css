@@ -1,0 +1,167 @@
+/* 1. RESET Y CONFIGURACIÓN BASE (Para eliminar el espacio blanco) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden; /* Evita scroll lateral */
+    background-color: #f8fafc;
+}
+
+/* 2. HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav a:hover {
+    color: #2563eb;
+}
+
+.boton-primero {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+/* Organiza las tarjetas y el formulario en dos columnas */
+.layout-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Columna pequeña para info, grande para formulario */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Estilo de las tarjetas de info */
+.canales-soporte {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-blanca {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    border: 1px solid #eef2f6;
+}
+
+/* Colores de iconos */
+.color-cian {
+    color: #4facfe;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Formulario */
+.input-grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-grupo label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1c2d;
+}
+
+.input-grupo input, .input-grupo textarea {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+/* Centrar el botón del formulario */
+.contenedor-boton-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Responsive: Una sola columna en móviles */
+@media (max-width: 768px) {
+    .layout-contacto {
+        grid-template-columns: 1fr;
+    }
+}
+/* FOOTER */
+.footer {
+    background: #020617;
+    color: white;
+    padding: 30px 8%;
+    text-align: center;
+}
+
+.footer-parrafo {
+    color: #cbd5e1;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .inicio-contenedor,
+    .nosotros-info,
+    .contenedor-contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .titulo-principal {
+        font-size: 40px;
+    }
+
+    .inicio-botones {
+        justify-content: center;
+    }
+}
+.footer-principal {
+    text-align: center;
+}
+
+.logofo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 160px;
+}
+
+
+
