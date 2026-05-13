@@ -16,11 +16,12 @@
         </div>
         <ul class="menu-lista">
             <li><a href="index.html"><i class="bi bi-house-door"></i> <span>Inicio</span></a></li>
-            <li><a href="colegios.html"><i class="bi bi-bank"></i> <span>Instituciones</span></a></li>
-            <li><a href="matriculas.html"><i class="bi bi-journal-bookmark"></i> <span>Matrículas</span></a></li>
+            <li><a href="RegistrarSede.html"><i class="bi bi-bank"></i> <span>Registrar Sede</span></a></li>
+            <li><a href="revisionM.html"><i class="bi bi-journal-bookmark"></i> <span>Matrículas</span></a></li>
             <li><a href="Matriculados.html"><i class="bi bi-people"></i> <span>Estudiantes</span></a></li>
             <li><a href="Roles.html" ><i class="bi bi-shield-lock"></i> <span>Roles</span></a></li>
             <li><a href="NotasCa.html"><i class="bi bi-folder2-open"></i> <span>Catálogos</span></a></li>
+            <li><a href="Perfil-Admin.html"><i class="bi bi-person-badge"></i> <span>Mi Perfil</span></a></li>
         </ul>
         <div class="menu-pie">
             <a href="index.html" class="enlace-salir"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
@@ -81,15 +82,50 @@
                 </div>
 
                 <div class="galeria-registro">
-                    <h3><i class="bi bi-images"></i> Galería y Registro</h3>
-                    <div class="grid-fotos">
-                        <div class="caja-foto vacia"><span>Logo</span></div>
-                        <div class="caja-foto vacia"><span>Fachada</span></div>
-                        <div class="caja-foto agregar"><i class="bi bi-plus-lg"></i></div>
-                        <div class="caja-foto agregar"><i class="bi bi-plus-lg"></i></div>
-                    </div>
-                    <button class="btn-guardar-todo">Guardar y Continuar</button>
+    <h3><i class="bi bi-images"></i> Galería e Institución</h3>
+    <p class="instruccion-galeria">Sube fotos de la fachada y documentos de requisitos legales.</p>
+
+    <div class="grid-fotos">
+        <div class="file-item">
+            <input type="file" id="file-requisitos" accept="image/*" class="input-oculto">
+            <label for="file-requisitos" class="caja-subida">
+                <i class="bi bi-file-earmark-arrow-up"></i>
+                <span>Requisitos de Matrícula</span>
+                <small>Formatos: JPG, PNG</small>
+            </label>
+        </div>
+
+        <div class="file-item">
+            <div class="caja-foto fachada">
+                <div class="overlay-foto">
+                    <i class="bi bi-pencil"></i>
+                    <span>Cambiar Fachada</span>
                 </div>
+                <span class="label-flotante">Fachada Principal</span>
+            </div>
+        </div>
+
+        <div class="file-item">
+            <input type="file" id="file-adicional" accept="image/*" class="input-oculto">
+            <label for="file-adicional" class="caja-subida">
+                <i class="bi bi-file-earmark-arrow-up"></i>
+                <span>Documentos Extra</span>
+                <small>Formatos: JPG, PNG</small>
+            </label>
+        </div>
+
+        <div class="file-item">
+            <div class="caja-foto agregar">
+                <i class="bi bi-plus-circle-dotted"></i>
+                <span>Añadir Campo</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-guardar-todo">
+        <i class="bi bi-cloud-check"></i> Guardar y Finalizar
+    </button>
+</div>
             </div>
         </section>
     </main>

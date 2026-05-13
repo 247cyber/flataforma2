@@ -256,6 +256,201 @@
     margin: 0 auto 20px;
     width: 160px;
 }
+/* 1. LA LÍNEA VERTICAL CENTRAL */
+/* Usamos el pseudoelemento ::before para crear la línea azul */
+.timeline-container::before {
+    content: '' ;
+    position: absolute ;
+    left: 50% ; /* Posiciona la línea en el medio exacto */
+    width: 3px ; /* Grosor de la línea */
+    height: calc(100% - 60px) ; /* Deja espacio al final */
+    background: #2563eb ; /* Color azul puro */
+    transform: translateX(-50%) ; /* Centra la línea */
+    border-radius: 2px ;
+    top: 50px ; /* Espacio antes de que empiece la línea */
+    z-index: 1 ;
+}
 
+/* 2. CADA PASO DE LA LÍNEA DE TIEMPO */
+.timeline-step {
+    position: relative ;
+    width: 100% ;
+    margin-bottom: 70px ; /* Espacio vertical entre pasos */
+    display: flex ;
+    justify-content: space-between ; /* Separa el contenido del icono/espacio */
+    align-items: center ; /* Centra verticalmente los elementos */
+    z-index: 2 ; /* Asegura que el contenido esté sobre la línea */
+}
 
+/* Logica de zig-zag: Alterna el orden de los elementos en pasos pares */
+.timeline-step:nth-child(even) {
+    flex-direction: row-reverse ; /* Invierte el orden */
+}
 
+/* 3. EL CÍRCULO CON EL NÚMERO (CENTRAL) */
+.step-number {
+    position: absolute ;
+    left: 50% ; /* Posiciona el círculo en el medio */
+    transform: translate(-50%, -50%) ; /* Centra el círculo exacto */
+    top: 50% ;
+    background: #2563eb ; /* Color azul */
+    color: #ffffff ; /* Texto blanco */
+    width: 50px ;
+    height: 50px ;
+    border-radius: 50% ; /* Hace el círculo perfecto */
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    font-weight: 700 ;
+    font-size: 1.1rem ;
+    z-index: 10 ;
+    box-shadow: 0 0 0 10px #ffffff ; /* El borde blanco "falso" para cortar la línea */
+}
+/* --- SECCIÓN RUTA DE GESTIÓN --- */
+.seccion-ruta {
+    padding: 80px 0;
+    background-color: #f8fafc; /* Fondo claro para resaltar las tarjetas */
+}
+
+.container12 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecera-ruta {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.etiqueta-viva {
+    background: #e0f2fe;
+    color: #4facfe;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cabecera-ruta h2 {
+    font-size: 2.5rem;
+    color: #1a1c2d;
+    margin: 15px 0;
+}
+
+.cabecera-ruta p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* --- TIMELINE CONTAINER --- */
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 1. LA LÍNEA VERTICAL CENTRAL */
+/* Usamos el pseudoelemento ::before para crear la línea azul */
+.timeline-container::before {
+    content: '' ;
+    position: absolute ;
+    left: 50% ; /* Posiciona la línea en el medio exacto */
+    width: 3px ; /* Grosor de la línea */
+    height: calc(100% - 60px) ; /* Deja espacio al final */
+    background: #2563eb ; /* Color azul puro */
+    transform: translateX(-50%) ; /* Centra la línea */
+    border-radius: 2px ;
+    top: 50px ; /* Espacio antes de que empiece la línea */
+    z-index: 1 ;
+}
+
+/* 2. CADA PASO DE LA LÍNEA DE TIEMPO */
+.timeline-step {
+    position: relative ;
+    width: 100% ;
+    margin-bottom: 70px ; /* Espacio vertical entre pasos */
+    display: flex ;
+    justify-content: space-between ; /* Separa el contenido del icono/espacio */
+    align-items: center ; /* Centra verticalmente los elementos */
+    z-index: 2 ; /* Asegura que el contenido esté sobre la línea */
+}
+
+/* Logica de zig-zag: Alterna el orden de los elementos en pasos pares */
+.timeline-step:nth-child(even) {
+    flex-direction: row-reverse ; /* Invierte el orden */
+}
+
+/* 3. EL CÍRCULO CON EL NÚMERO (CENTRAL) */
+.step-number {
+    position: absolute ;
+    left: 50% ; /* Posiciona el círculo en el medio */
+    transform: translate(-50%, -50%) ; /* Centra el círculo exacto */
+    top: 50% ;
+    background: #2563eb ; /* Color azul */
+    color: #ffffff ; /* Texto blanco */
+    width: 50px ;
+    height: 50px ;
+    border-radius: 50% ; /* Hace el círculo perfecto */
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    font-weight: 700 ;
+    font-size: 1.1rem ;
+    z-index: 10 ;
+    box-shadow: 0 0 0 10px #ffffff ; /* El borde blanco "falso" para cortar la línea */
+}
+
+/* 4. LAS TARJETAS DE CONTENIDO */
+.step-content {
+    width: 44% ; /* Ancho de la tarjeta de texto */
+    background: #ffffff ;
+    border-radius: 24px ; /* Bordes redondeados idénticos a la imagen */
+    padding: 35px 40px ; /* Aire dentro de la tarjeta */
+    box-shadow: 0 10px 35px rgba(0,0,0,0.04) ; /* Sombra muy suave */
+    border: 1px solid #e2e8f0 ; /* Borde muy claro */
+    text-align: left ; /* Por defecto a la izquierda */
+    display: flex ;
+    flex-direction: column ;
+    gap: 10px ; /* Espacio entre título y texto */
+}
+
+/* Alineación de texto inversa para las tarjetas de la derecha (Pasos pares) */
+.timeline-step:nth-child(even) .step-content {
+    text-align: right ; /* Texto a la derecha */
+}
+
+.step-content h4 {
+    font-size: 1.3rem ;
+    font-weight: 700 ;
+    color: #1e293b ;
+    margin: 0 ;
+}
+
+.step-content p {
+    font-size: 0.95rem ;
+    color: #64748b ;
+    line-height: 1.6 ;
+    margin: 0 ;
+}
+
+/* 5. LOS ICONOS DE FONDO (FANTASMA) */
+.step-icon {
+    width: 44% ; /* Mismo ancho que las tarjetas para alineación */
+    display: flex ;
+    justify-content: center ;
+    font-size: 3rem ; /* Tamaño grande del icono */
+    color: #2563eb ;
+    opacity: 0.1 ; /* Muy transparente */
+}
+
+/* Alinear icono a la derecha si la tarjeta está a la izquierda */
+.timeline-step:nth-child(even) .step-icon {
+    justify-content: flex-start ;
+}
+.timeline-step:nth-child(odd) .step-icon {
+    justify-content: flex-end ;
+}

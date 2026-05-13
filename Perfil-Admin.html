@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Administrador - EasyMatric</title>
+    <link rel="stylesheet" href="estilos/global.css">
+    <link rel="stylesheet" href="estilos/perfilUsuario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="cuerpo-dashboard">
+
+    <nav class="menu-lateral">
+        <div class="menu-logo">
+            <img src="imagenes/logo.png" alt="EasyMatric" class="logo-img">
+        </div>
+        <ul class="menu-lista">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> <span>Inicio</span></a></li>
+            <li><a href="RegistrarSede.html"><i class="bi bi-bank"></i> <span>Registrar Sede</span></a></li>
+            <li><a href="revisionM.html"><i class="bi bi-journal-bookmark"></i> <span>Matrículas</span></a></li>
+            <li><a href="Matriculados.html"><i class="bi bi-people"></i> <span>Estudiantes</span></a></li>
+            <li><a href="Roles.html" ><i class="bi bi-shield-lock"></i> <span>Roles</span></a></li>
+            <li><a href="NotasCa.html"><i class="bi bi-folder2-open"></i> <span>Catálogos</span></a></li>
+            <li><a href="Perfil-Admin.html" class="active"><i class="bi bi-person-badge"></i> <span>Mi Perfil</span></a></li>
+        </ul>
+        <div class="menu-pie">
+            <a href="index.html" class="enlace-salir"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
+            <div class="perfil-usuario-info">
+                <i class="bi bi-person-circle"></i> 
+                <span>ADMINISTRADOR</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contenido-principal">
+        <div class="perfil-contenedor">
+            
+            <header class="perfil-header">
+                <div class="perfil-info-basica">
+                    <div class="avatar-zona">
+                        <img src="imagenes/negro.jpg" alt="Foto de Perfil" class="avatar-img">
+                        <button class="btn-cambiar-foto"><i class="bi bi-camera"></i></button>
+                    </div>
+                    <div class="texto-usuario">
+                        <h1>Juan Andres Estrada Erazo</h1>
+                        <span class="badge-rol-admin">Rector Institucional</span>
+                    </div>
+                </div>
+                <button class="boton-accion-principal"><i class="bi bi-pencil-square"></i> Editar Perfil</button>
+            </header>
+
+            <div class="perfil-grid-contenido">
+                <section class="seccion-datos">
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-person-vcard"></i> Datos de Identificación</h3>
+                        <div class="los-datos-grid">
+                            <div class="dato-item">
+                                <label>Número de Cédula</label>
+                                <div class="caja-dato">10058191</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Cargo Oficial</label>
+                                <div class="caja-dato">Rector Académico</div>
+                            </div>
+                            <div class="dato-item-ancho">
+                                <label>Correo Institucional</label>
+                                <div class="caja-dato">juanestrada@soysena.edu.co</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-blanca" style="margin-top: 20px;">
+                        <h3><i class="bi bi-building-check"></i> Entidad Vinculada</h3>
+                        <div class="los-datos-grid">
+                            <div class="dato-item-ancho">
+                                <label>Institución Educativa</label>
+                                <div class="caja-dato">Institución Educación San Vicente</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>NIT Institucional</label>
+                                <div class="caja-dato">800.123.456-1</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Teléfono Oficina</label>
+                                <div class="caja-dato">602 823 4567</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="columna-lateral">
+                    <div class="tarjeta-blanca estadisticas-admin">
+                        <h3><i class="bi bi-graph-up"></i> Mi Actividad</h3>
+                        <div class="mini-stat">
+                            <span>Matrículas revisadas</span>
+                            <strong>124</strong>
+                        </div>
+                        <div class="mini-stat">
+                            <span>Sedes a cargo</span>
+                            <strong>02</strong>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-shield-check"></i> Seguridad</h3>
+                        <p>Control de acceso y credenciales.</p>
+                        <button class="btn-seguridad"><a href="ReperaContra.html">Cambiar mi clave</a></button>
+                    </div>
+
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-gear"></i> Sistema</h3>
+                        <div class="control-switch">
+                            <span>Alertas de Cupos</span>
+                            <i class="bi bi-toggle-on"></i>
+                        </div>
+                        <div class="control-switch">
+                            <span>Modo Reporte Semanal</span>
+                            <i class="bi bi-toggle-off"></i>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

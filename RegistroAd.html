@@ -14,13 +14,14 @@
         <div class="cuadro-registro-admin">
             
             <div class="registro-header">
-                <img src="imagenes/logo.png" alt="EasyMatric" class="logo-easymatric">
+                <img src="imagenes/LogoAzulSin.png" alt="EasyMatric" class="logo-easymatric">
                 <div class="badge-admin">PERFIL ADMINISTRATIVO</div>
                 <h1>Crear Cuenta Admin</h1>
-                <p>Ingresa los datos para gestionar tu institución</p>
+                <p>Configura el acceso para gestionar tu institución educativa</p>
             </div>
 
             <form action="procesar_admin.php" method="POST">
+                
                 <div class="fila-input">
                     <div class="grupo-input">
                         <i class="bi bi-person-gear"></i>
@@ -34,38 +35,57 @@
                         <input type="text" name="institucion" placeholder="Nombre de la Institución" required>
                     </div>
                     <div class="grupo-input" style="flex: 0.8;">
+                        <i class="bi bi-hash"></i>
+                        <input type="text" name="nit_institucion" placeholder="NIT / Código" required>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="grupo-input" style="flex: 1;">
+                        <i class="bi bi-card-checklist"></i>
+                        <input type="text" name="n_documento" placeholder="Cédula de Ciudadanía" required>
+                    </div>
+                    <div class="grupo-input" style="flex: 1;">
                         <select class="select-input" name="cargo" required>
-                            <option value="" disabled selected>Cargo</option>
-                            <option value="Rector">Rector</option>
-                            <option value="Secretario">Administrador</option>
-                            <option value="Coordinador">Coordinador</option>
+                            <option value="" disabled selected>Selecciona tu Cargo</option>
+                            <option value="Rector">Rector/a</option>
+                            <option value="Secretario">Secretaría Académica</option>
+                            <option value="Coordinador">Coordinación</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="fila-input">
                     <div class="grupo-input">
-                        <i class="bi bi-card-checklist"></i>
-                        <input type="text" name="n_documento" placeholder="Número de Documento" required>
+                        <i class="bi bi-telephone-plus"></i>
+                        <input type="tel" name="telefono" placeholder="Teléfono Institucional" required>
                     </div>
                     <div class="grupo-input">
-                        <i class="bi bi-telephone-plus"></i>
-                        <input type="tel" name="telefono" placeholder="Teléfono Oficina" required>
+                        <i class="bi bi-envelope-check"></i>
+                        <input type="email" name="correo" placeholder="Correo de Contacto" required>
                     </div>
                 </div>
 
-                <div class="grupo-input">
-                    <i class="bi bi-envelope-check"></i>
-                    <input type="email" name="correo" placeholder="Correo Institucional" required>
+                <div class="fila-input">
+                    <div class="grupo-input">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <input type="password" name="pass" placeholder="Crear Contraseña" required>
+                    </div>
+                    <div class="grupo-input">
+                        <i class="bi bi-shield-check"></i>
+                        <input type="password" name="pass_confirm" placeholder="Repetir Contraseña" required>
+                    </div>
                 </div>
 
-                <div class="grupo-input">
-                    <i class="bi bi-shield-lock-fill"></i>
-                    <input type="password" name="pass" placeholder="Contraseña de Seguridad" required>
+                <div class="contenedor-terminos" style="margin: 15px 0; font-size: 0.8rem; color: #64748b;">
+                    <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" name="terminos" required style="margin-top: 3px;">
+                        <span>Acepto el tratamiento de datos personales y los <a href="#" style="color: #4facfe; text-decoration: none;">Términos de Servicio</a>.</span>
+                    </label>
                 </div>
 
                 <div class="contenedor-boton">
-                        <a href="RegistrarSede.html" class="btn-registrar">INICIAR SESIÓN</a>
+                    <a href="perfil-admin.html" class="btn-registrar"><i class= "bi bi-person-plus"></i>crear cuenta</a>
                 </div>
 
             </form>
@@ -81,4 +101,4 @@
     </div>
 
 </body>
-</html>
+</html> 

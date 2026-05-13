@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisar documentacion</title>
+    <link rel="stylesheet" href="/estilos/global.css">
+    <link rel="stylesheet" href="/estilos/RevisionM.css">
+</head>
+
+<body>
+    <nav class="menu-lateral">
+        <div class="menu-logo">
+            <img src="imagenes/logo.png" alt="EasyMatric" class="logo-img">
+        </div>
+        <ul class="menu-lista">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> <span>Inicio</span></a></li>
+            <li><a href="RegistrarSede.html"><i class="bi bi-bank"></i> <span>Registrar Sede</span></a></li>
+            <li><a href="revisionM.html"><i class="bi bi-journal-bookmark"></i> <span>Matrículas</span></a></li>
+            <li><a href="Matriculados.html"><i class="bi bi-people"></i> <span>Estudiantes</span></a></li>
+            <li><a href="Roles.html"><i class="bi bi-shield-lock"></i> <span>Roles</span></a></li>
+            <li><a href="catalogos.html"><i class="bi bi-folder2-open"></i> <span>Catálogos</span></a></li>
+            <li><a href="Perfil-Admin.html"><i class="bi bi-person-badge"></i> <span>Mi Perfil</span></a></li>
+
+        </ul>
+        <div class="menu-pie">
+            <a href="index.html" class="enlace-salir"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
+            <div class="perfil-usuario-info">
+                <i class="bi bi-person-circle"></i>
+                <span>ADMINISTRADOR</span>
+            </div>
+
+        </div>
+    </nav>
+    <div class="contenido">
+        <div class="header">
+            <h2>Revisión de Documentación</h2>
+            <p>Revisión de Solicitudes y Validacion Matrículas</p>
+        </div>
+        <br>
+    <section class="contenedor-tabla-soft">
+    <div class="barra-herramientas">
+
+        <div class="acciones-header">
+                <select class="btn-primario1" name="Filtra por grado" required>
+                                <option value="">Filtra por grado</option>
+                                <option value="6">Prescolar</option>
+                                <option value="7">Primaria</option>
+                                <option value="8">Secundaria</option>
+                </select>
+                        
+        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Documento</th>
+                        <th>Fecha Envío</th>
+                        <th>Estado Actual</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana Rodríguez</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>27/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Breiner Pérez</td>
+                        <td><a href="#" class="btn-link">Ver_Documento.pdf</a></td>
+                        <td>26/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Valentina Ospina</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>26/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Andrés Mendoza</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>27/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Angie Marcela Ortiz</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>27/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mariana Lucía Torres</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>02/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sofía Elena Gómez</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>21/02/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Samuel David Quintero</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>27/03/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Isabella Caicedo</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>03/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mateo Holguín</td>
+                        <td><a href="#" class="btn-link">ver_documento.pdf</a></td>
+                        <td>17/04/2026</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td class="acciones-validacion">
+                            <button class="btn-aprobar">Aprobar</button>
+                            <button class="btn-rechazar">Rechazar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

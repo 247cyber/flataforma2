@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyMatric - Registro Docente</title>
+    <link rel="stylesheet" href="estilos/global.css">
+    <link rel="stylesheet" href="estilos/RegistroAd.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Ajuste de color para diferenciar del Admin sin romper tu estructura */
+        :root {
+            --color-docente: #1b5e20; /* Verde oscuro educativo */
+            --color-docente-suave: #e8f5e9;
+        }
+        .badge-docente {
+            background: var(--color-docente-suave);
+            color: var(--color-docente);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .btn-docente {
+            background: var(--color-docente) !important;
+            border-color: var(--color-docente) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pantalla-fondo">
+        <div class="cuadro-registro-admin">
+            
+            <div class="registro-header">
+                <img src="imagenes/LogoAzulSin.png" alt="EasyMatric" class="logo-easymatric">
+                <div class="badge-docente">MÓDULO PEDAGÓGICO</div>
+                <h1>Registro de Docente</h1>
+                <p>Configura tu perfil académico para la gestión de notas y grupos</p>
+            </div>
+
+            <form action="procesar_docente.php" method="POST">
+                
+                <div class="fila-input">
+                    <div class="grupo-input">
+                        <i class="bi bi-person-badge"></i>
+                        <input type="text" name="nombre_docente" placeholder="Nombres y Apellidos" required>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="grupo-input" style="flex: 1;">
+                        <i class="bi bi-key-fill"></i>
+                        <input type="text" name="codigo_inst" placeholder="Código de Institución" title="Pide este código a tu administrador" required>
+                    </div>
+                    <div class="grupo-input" style="flex: 1;">
+                        <select class="select-input" name="jornada" required>
+                            <option value="" disabled selected>Jornada</option>
+                            <option value="Manana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Unica">Jornada Única</option>
+                            <option value="Nocturna">Nocturna</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="grupo-input" style="flex: 1.2;">
+                        <i class="bi bi-book"></i>
+                        <select class="select-input" name="materia_principal" required>
+                            <option value="" disabled selected>Materia Principal</option>
+                            <option value="Matematicas">Matemáticas</option>
+                            <option value="Español">Lengua Castellana</option>
+                            <option value="Ingles">Idiomas Extranjeros</option>
+                            <option value="Informatica">Informática / ADSO</option>
+                            <option value="Artistica">Educación Artística</option>
+                        </select>
+                    </div>
+                    <div class="grupo-input" style="flex: 0.8;">
+                        <select class="select-input" name="escalafon" required>
+                            <option value="" disabled selected>Tipo Contrato</option>
+                            <option value="Planta">Planta</option>
+                            <option value="Provisional">Provisional</option>
+                            <option value="Catedra">Cátedra</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="grupo-input">
+                        <i class="bi bi-envelope-at"></i>
+                        <input type="email" name="correo" placeholder="Correo Personal o Institucional" required>
+                    </div>
+                    <div class="grupo-input">
+                        <i class="bi bi-shield-lock-fill"></i>
+                        <input type="password" name="pass" placeholder="Contraseña" required>
+                    </div>
+                </div>
+
+                <div class="contenedor-boton">
+                        <button type="submit" class="btn-registrar btn-docente">FINALIZAR REGISTRO</button>
+                </div>
+
+            </form>
+
+            <div class="pie-cuadro">
+                <div class="botones-inferiores">
+                    <a href="SelecionRol.html" class="btn-mini"><i class="bi bi-arrow-left"></i> Volver a Roles</a>
+                    <a href="index.html" class="btn-mini"><i class="bi bi-question-circle"></i> Ayuda</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+:root {
+    --azul-navy: #1a1c2d;
+    --cyan-em: #4facfe;
+    --blanco: #ffffff;
+    --gris-fondo: #f8fafc;
+    --border-color: #eef2f6;
+}
+
+/* --- MENÚ LATERAL --- */
+.menu-lateral {
+    width: 260px;
+    height: 100vh;
+    background: var(--azul-navy);
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.menu-logo {
+    padding: 0 30px 40px;
+    text-align: center;
+}
+
+.logo-img {
+    height: 45px;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu-lista li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-lista li a i {
+    font-size: 1.2rem;
+}
+
+.menu-lista li a:hover, 
+.menu-lista li a.activo {
+    color: white;
+    background: rgba(66, 136, 197, 0.1);
+    border-left: 4px solid var(--cyan-em);
+}
+
+.menu-pie {
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.enlace-salir {
+    color: #ef4444;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.perfil-usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--cyan-em);
+}
+
+.contenido {
+    margin-left: 280px; /* Exactamente igual al ancho del menú */
+    width: calc(100% - 280px); /* Restamos el menú para que no se salga */
+    padding: 40px;
+    box-sizing: border-box; /* Importante para que el padding no sume ancho */
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+
+/* --- TABLA Y BOTONES NUEVOS --- */
+.tabla-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Colores para las etiquetas de estado */
+.badge.pendiente {
+    background: #fef9c3;
+    color: #854d0e;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* Botones de acción rápida */
+.acciones-validacion {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-aprobar {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-rechazar {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-link {
+    color: #3b82f6;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Hover para los botones */
+.btn-aprobar:hover { background-color: #16a34a; }
+.btn-rechazar:hover { background-color: #dc2626; }
+.btn-primario1 {
+    background-color: var(--cyan-em);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
