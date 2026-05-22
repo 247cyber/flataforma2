@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos - EasyMatric</title>
+    <link rel="stylesheet" href="estilos/global.css">
+    <link rel="stylesheet" href="estilos/EditarPerfil.css"> 
+
+
+</head>
+<body class="cuerpo-dashboard">
+
+        <nav class="menu-lateral">
+        <div class="menu-logo">
+            <img src="imagenes/LogoBlancoSin.png" alt="EasyMatric" class="logo-img">
+        </div>
+         <ul class="menu-lista">
+            <li><a href="index.html"><i class="bi bi-house-door"></i> <span>Inicio</span></a></li>
+            <li><a href="colegios.html"><i class="bi bi-bank"></i> <span>Instituciones</span></a></li>
+            <li><a href="MatriculasE.html"><i class="bi bi-journal-bookmark"></i> <span>Mis Matrículas</span></a></li>
+            <li><a href="ModulosAcademicos.html" ><i class="bi bi-folder2-open"></i> <span>Catálogos</span></a></li>
+            <li><a href="perfilUsuario.html"><i class="bi bi-person-badge"></i> <span>Mi Perfil</span></a></li>
+            
+        </ul>
+        <div class="menu-pie">
+            <a href="index.html" class="enlace-salir"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
+            <div class="perfil-usuario-info"><i class="bi bi-person-circle"></i> <span>ESTUDIANTE</span></div>
+        </div>
+    </nav>
+
+    <main class="contenido-principal">
+        
+        <section class="contenedor-tabla-soft">
+            <div class="titulo-seccion-form">
+                <h3><i class="bi bi-person-vcard"></i> Información Personal</h3>
+            </div>
+
+            <form class="formulario-datos" action="#" method="POST">
+                
+                <div class="fila-formulario">
+                    <div class="grupo-input">
+                        <label for="primerNombre">Primer Nombre</label>
+                        <input type="text" id="primerNombre" name="primerNombre" value="Juan" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="segundoNombre">Segundo Nombre</label>
+                        <input type="text" id="segundoNombre" name="segundoNombre" value="Andres">
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="grupo-input">
+                        <label for="primerApellido">Primer Apellido</label>
+                        <input type="text" id="primerApellido" name="primerApellido" value="Estrada" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="segundoApellido">Segundo Apellido</label>
+                        <input type="text" id="segundoApellido" name="segundoApellido" value="Erazo">
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="grupo-input">
+                        <label for="tipoDocumento">Tipo de Documento</label>
+                        <select id="tipoDocumento" name="tipoDocumento" required>
+                            <option value="C.C." selected>C.C. (Cédula de Ciudadanía)</option>
+                            <option value="T.I.">T.I. (Tarjeta de Identidad)</option>
+                            <option value="R.C.">R.C. (Registro Civil)</option>
+                            <option value="C.E.">C.E. (Cédula de Extranjería)</option>
+                        </select>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="numeroDocumento">Número de Identificación</label>
+                        <input type="text" id="numeroDocumento" name="numeroDocumento" value="10058191" required>
+                    </div>
+                </div>
+
+                <div class="linea-divisoria"></div>
+
+                <div class="titulo-seccion-form">
+                    <h3><i class="bi bi-telephone"></i> Datos de Contacto e Institución</h3>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="grupo-input">
+                        <label for="telefono">Teléfono Móvil</label>
+                        <input type="tel" id="telefono" name="telefono" value="310 123 4567" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" value="juanestrada@soysena.edu.co" required>
+                    </div>
+                </div>
+
+                <div class="fila-formulario ancho-completo">
+                    <div class="grupo-input">
+                        <label for="institucion">Institución Educativa de Interés</label>
+                        <select id="institucion" name="institucion" required>
+                            <option value="San Vicente" selected>Institución Educación San Vicente</option>
+                            <option value="Inem">Institución Educativa INEM Francisco José de Caldas</option>
+                            <option value="Don Bosco">Colegio Don Bosco</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="zona-botones-form">
+                    <button type="button" class="btn-secundario">Cancelar</button>
+                    <a href="perfilUsuario.html"></a>
+                    <button type="submit" class="btn-primario"><i class="bi bi-check-circle"></i> Guardar Cambios</button>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

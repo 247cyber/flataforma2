@@ -42,36 +42,48 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
-/* Barra de Herramientas */
+/* --- ARREGLO DE LA LUPA --- */
 .barra-herramientas {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Asegura alineación con el nav */
     margin-bottom: 20px;
 }
 
 .caja-busqueda {
-    position: relative;
-    width: 300px;
+    position: relative; /* Necesario para posicionar la lupa dentro */
+    width: 320px;
+    display: flex;
+    align-items: center;
 }
 
 .caja-busqueda i {
     position: absolute;
     left: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Centrado vertical exacto */
     color: #94a3b8;
+    font-size: 1.1rem;
+    z-index: 5;
+    pointer-events: none; /* Evita que la lupa bloquee el clic en el input */
 }
 
 .caja-busqueda input {
     width: 100%;
-    padding: 12px 12px 12px 45px;
+    padding: 12px 15px 12px 45px; /* 45px de espacio para que el texto no toque la lupa */
     border-radius: 12px;
     border: 1px solid var(--border-color);
     background: #f8fafc;
     outline: none;
+    transition: all 0.3s ease;
 }
 
-.caja-busqueda input:focus { border-color: var(--cyan-em); background: white; }
+.caja-busqueda input:focus { 
+    border-color: var(--cyan-em); 
+    background: white; 
+    box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+}
+/* -------------------------- */
 
 /* Tabla Estilo SENA/Soft */
 .tabla-matriculados {
@@ -131,6 +143,7 @@
 }
 
 .btn-tabla:hover { color: var(--azul-navy); }
+
 /* --- MENÚ LATERAL --- */
 .menu-lateral {
     width: 260px;
@@ -169,9 +182,6 @@
     transition: 0.3s;
 }
 
-.menu-lista li a i {
-    font-size: 1.2rem;
-}
 
 .menu-lista li a:hover, 
 .menu-lista li a.activo {
@@ -202,3 +212,27 @@
     font-size: 0.8rem;
     color: var(--cyan-em);
 }
+
+/* Contenedor de la navegación superior */
+.nav {
+    display: flex;
+    gap: 30px;
+    padding: 15px 0;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav a:hover {
+    color: #2563eb;
+}
+
+
