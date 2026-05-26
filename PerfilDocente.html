@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Docente - EasyMatric</title>
+    <link rel="stylesheet" href="estilos/global.css">
+    <link rel="stylesheet" href="estilos/perfilUsuario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="cuerpo-dashboard">
+
+    <nav class="menu-lateral">
+        <div class="menu-logo">
+            <img src="imagenes/LogoBlancoSin.png" alt="EasyMatric" class="logo-img">
+        </div>
+        
+        <ul class="menu-lista">
+            <li><a href="inicio-docente.html"><i class="bi bi-journal-bookmark"></i> <span>Mis Módulos</span></a></li>
+            <li><a href="subir-modulo.html"><i class="bi bi-cloud-upload"></i> <span>Subir Módulo</span></a></li>
+            <li><a href="perfilDocente.html" class="activo"><i class="bi bi-person-badge"></i> <span>Mi Perfil</span></a></li>
+        </ul>
+
+        <div class="menu-pie">
+            <a href="index.html" class="enlace-salir"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
+            <div class="perfil-usuario-info">
+                <i class="bi bi-person-circle"></i>
+                <span>DOCENTE</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contenido-principal">
+        <div class="perfil-contenedor">
+            
+            <header class="perfil-header">
+                <div class="perfil-info-basica">
+                    <div class="avatar-zona">
+                        <img src="imagenes/negro.jpg" alt="Foto de Perfil Docente" class="avatar-img">
+                        <button class="btn-cambiar-foto"><i class="bi bi-camera"></i></button>
+                    </div>
+                    <div class="texto-usuario">
+                        <h1>Carlos Alberto Mendoza</h1>
+                        <span class="etiqueta-rol">Docente de Planta - Humanidades</span>
+                        <p><i class="bi bi-geo-alt"></i> Popayán, Colombia</p>
+                    </div>
+                </div>
+                <a href="EditarPerfilDocente.html" class="boton-accion-principal"><i class="bi bi-pencil-square"></i> Actualizar Datos</a>
+            </header>
+
+            <div class="perfil-grid-contenido">
+                <section class="seccion-datos">
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-person-lines-fill"></i> Información Profesional</h3>
+                        
+                        <div class="los-datos-grid">
+                            <div class="dato-item">
+                                <label>Nombres</label>
+                                <div class="caja-dato">Carlos Alberto</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Apellidos</label>
+                                <div class="caja-dato">Mendoza Ruíz</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Número de Identificación</label>
+                                <div class="caja-dato">10.452.963</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>ID Registro Docente</label>
+                                <div class="caja-dato">DOC-2026-88</div>
+                            </div>
+                            <div class="dato-item-ancho">
+                                <label>Especialidad Académica</label>
+                                <div class="caja-dato">Licenciatura en Lengua Castellana y Literatura</div>
+                            </div>
+                            <div class="dato-item-ancho">
+                                <label>Sede Educativa Asignada</label>
+                                <div class="caja-dato">Institución Educación San Vicente - Sede Principal</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Teléfono de Contacto</label>
+                                <div class="caja-dato">315 789 0123</div>
+                            </div>
+                            <div class="dato-item">
+                                <label>Correo Institucional</label>
+                                <div class="caja-dato">carlos.mendoza@easymatric.edu.co</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="columna-lateral">
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-shield-check"></i> Seguridad</h3>
+                        <p>Mantén tu cuenta protegida.</p>
+                        <button class="btn-seguridad"><a href="RecuperaContra.html" style="text-decoration: none; color: inherit;">Cambiar contraseña</a></button>
+                    </div>
+
+                    <div class="tarjeta-blanca">
+                        <h3><i class="bi bi-gear"></i> Preferencias</h3>
+                        <div class="control-switch">
+                            <span>Avisos de Alumnos Nuevos</span>
+                            <i class="bi bi-toggle-on"></i>
+                        </div>
+                        <div class="control-switch">
+                            <span>Recordatorios de Cierre</span>
+                            <i class="bi bi-toggle-on"></i>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

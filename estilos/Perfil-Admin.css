@@ -1,7 +1,3 @@
-/* =========================================
-   DASHBOARD PERFIL USUARIO - EASYMATRIC
-   ========================================= */
-
 :root {
     --azul-navy:  #1a1c2d;
     --cyan-em: #4facfe;
@@ -16,8 +12,9 @@
 .cuerpo-dashboard {
     background-color: var(--gris-fondo);
     margin: 0;
-    display: flex; /* Para poner el menú al lado del contenido */
+    display: flex; 
     font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
 }
 
 /* --- MENÚ LATERAL --- */
@@ -27,9 +24,12 @@
     background: var(--azul-navy);
     color: white;
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     padding: 30px 0;
+    z-index: 100; /* Asegura que el menú siempre esté arriba */
 }
 
 .menu-logo {
@@ -92,181 +92,330 @@
     color: var(--cyan-em);
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
+/* --- CONTENEDOR PRINCIPAL (CORRECCIÓN CLAVE) --- */
 .contenido-principal {
-    margin-left: 260px; /* Espacio para el menú fijo */
+    margin-left: 260px;
     width: calc(100% - 260px);
     padding: 40px;
+    box-sizing: border-box;
 }
 
-.perfil-contenedor {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+/* ==========================================
+   INTERFAZ DE PERFIL DE ADMINISTRADOR (SOFT UI)
+   ========================================== */
 
-/* Header del Perfil */
-.perfil-header {
-    background: var(--blanco);
-    padding: 30px;
-    border-radius: 25px;
+/* Tarjeta de Identidad Superior */
+.tarjeta-identidad-superior {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: var(--sombra);
-    margin-bottom: 30px;
-}
-
-.perfil-info-basica {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.avatar-zona {
-    position: relative;
-}
-
-.avatar-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--cyan-em);
-}
-
-.btn-cambiar-foto {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: var(--azul-navy);
-    color: white;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.texto-usuario h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: var(--azul-navy);
-}
-
-.etiqueta-rol {
-    color: var(--cyan-em);
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.boton-accion-principal {
-    background: var(--cyan-em);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.boton-accion-principal:hover {
-    background: var(--azul-navy);
-}
-
-/* Grid de Información */
-.perfil-grid-contenido {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Una columna grande y otra pequeña */
-    gap: 30px;
-}
-
-.tarjeta-blanca {
-    background: var(--blanco);
-    padding: 25px;
+    background-color: #ffffff;
+    padding: 24px;
     border-radius: 20px;
+    margin-bottom: 25px;
     box-shadow: var(--sombra);
-    margin-bottom: 20px;
 }
 
-.tarjeta-blanca h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
+.bloque-usuario-avatar {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: var(--azul-navy);
-}
-
-.tarjeta-blanca h3 i {
-    color: var(--cyan-em);
-}
-
-/* Grid de datos */
-.los-datos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.dato-item label {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--gris-texto);
-    margin-bottom: 5px;
+.contenedor-foto-admin {
+    position: relative;
+    width: 85px;
+    height: 85px;
 }
 
-.caja-dato {
-    background: var(--gris-fondo);
-    padding: 12px;
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cyan-em); /* Cambiado por tu identidad */
+}
+
+.btn-subir-foto {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #1e293b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.info-texto-admin h2 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin: 0;
+}
+
+.rol-tag-texto {
+    font-size: 0.9rem;
+    color: var(--cyan-em); /* Cambiado por tu identidad */
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.ciudad-texto {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+/* Botón Actualizar Superior */
+.btn-actualizar-datos {
+    background-color: var(--cyan-em); /* Cambiado por tu identidad */
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
     border-radius: 10px;
     font-weight: 600;
-    color: var(--azul-navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
 }
 
-.dato-item-ancho {
-    grid-column: span 2;
+.btn-actualizar-datos:hover {
+    background-color: #3b9ae6; /* Un tono un poco más oscuro para el hover */
+    box-shadow: 0 0 12px rgba(79, 172, 254, 0.3);
 }
 
-/* Sidebar lateral */
-.indicador-progreso {
-    margin: 20px 0;
+/* Disposición de Mallas (Grid Layout) */
+.malla-perfil-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+    align-items: start;
 }
 
-.barra-externa {
-    background: var(--gris-fondo);
-    height: 10px;
+/* Bloque del Formulario Izquierdo */
+.bloque-formulario-izquierdo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.encabezado-bloque-titulo h3 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fila-inputs-dobles {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-input-perfil {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.grupo-input-perfil.compacto {
+    flex: 0.7;
+}
+
+.grupo-input-perfil label {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    font-weight: 500;
+}
+
+/* Campos de entrada e Iconos internos */
+.caja-input-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.caja-input-icono i {
+    position: absolute;
+    left: 16px;
+    color: var(--gris-texto);
+    font-size: 1.05rem;
+}
+
+.caja-input-icono input, 
+.caja-input-icono select {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border: 1px solid var(--borde);
+    background-color: #f8fafc;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.caja-input-icono input:focus, 
+.caja-input-icono select:focus {
+    border-color: var(--cyan-em);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+}
+
+/* Tarjetas Laterales Derechas */
+.columna-tarjetas-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-lateral-soft {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.titulo-tarjeta-lateral h4 {
+    font-size: 1rem;
+    color: #0f172a;
+    margin: 0 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.descripcion-tarjeta-lateral {
+    font-size: 0.88rem;
+    color: var(--gris-texto);
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+}
+
+/* Barra de progreso */
+.progreso-contenedor {
+    margin-bottom: 14px;
+}
+
+.barra-progreso-fondo {
+    background-color: var(--gris-fondo);
+    height: 8px;
     border-radius: 10px;
-    margin-bottom: 8px;
+    overflow: hidden;
+    margin-bottom: 6px;
 }
 
-.barra-interna {
-    background: linear-gradient(to right, var(--cyan-em), var(--cyan-glow));
+.barra-progreso-activa {
+    background: linear-gradient(90deg, var(--cyan-glow), var(--cyan-em));
     height: 100%;
     border-radius: 10px;
 }
 
-.btn-seguridad {
-    width: 100%;
-    background: var(--gris-fondo);
-    color: var(--azul-navy);
-    border: 1px solid var(--borde);
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+.porcentaje-texto {
+    font-size: 0.85rem;
     font-weight: 600;
+    color: #0f172a;
 }
 
-.control-switch {
+/* Botones de acción secundarios */
+.btn-accion-lateral {
+    width: 100%;
+    background-color: var(--gris-fondo);
+    color: #1e293b;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-accion-lateral:hover {
+    background-color: var(--borde);
+}
+
+/* Switches de Preferencias */
+.control-switch-opcion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
+    padding: 10px 0;
     font-size: 0.9rem;
+    color: #334155;
 }
 
-.control-switch i {
-    font-size: 1.5rem;
-    color: var(--cyan-em);
+/* Renderizado del Switch */
+.switch-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-redondo {
+    position: absolute;
     cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #cbd5e1;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider-redondo:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.switch-toggle input:checked + .slider-redondo {
+    background-color: var(--cyan-em);
+}
+
+.switch-toggle input:checked + .slider-redondo:before {
+    transform: translateX(20px);
+}
+
+/* Responsivo rápido */
+@media (max-width: 992px) {
+    .contenido-principal {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .menu-lateral {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .cuerpo-dashboard {
+        flex-direction: column;
+    }
+    .malla-perfil-layout {
+        grid-template-columns: 1fr;
+    }
 }
